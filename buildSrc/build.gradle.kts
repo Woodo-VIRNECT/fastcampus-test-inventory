@@ -1,10 +1,13 @@
 plugins {
+    `java-library`
     `kotlin-dsl`
 }
 
+repositories {
+    mavenCentral()
+}
+
 java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
-        vendor.set(JvmVendorSpec.ADOPTIUM)
-    }
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
